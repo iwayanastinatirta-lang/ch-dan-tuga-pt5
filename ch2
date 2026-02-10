@@ -1,0 +1,11 @@
+me = {
+    'name':'Yan',
+    'age':18,
+    'favorite_hobby':'Playing game'
+}
+
+my_fovorite_hobby = me.get('favorite_hobby')
+print(my_fovorite_hobby)
+
+my_fovorite_color = me.get('favorite_color')
+print(my_fovorite_color)
