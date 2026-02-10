@@ -1,0 +1,11 @@
+json = {
+  "name": "squirtle",
+  "HP": 25,
+  "is_starter":true
+}
+
+dict = {
+  "name": "squirtle",
+  "HP": 25,
+  "is_starter":True
+}
