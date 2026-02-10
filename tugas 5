@@ -1,0 +1,48 @@
+# Simple Pokedex
+
+pokedex = {
+    "Pikachu": {"type": "Electric", "hp": 35, "attack": 55},
+    "Bulbasaur": {"type": "Grass", "hp": 45, "attack": 49},
+    "Charmander": {"type": "Fire", "hp": 39, "attack": 52}
+}
+
+while True:
+    print("\nMenu: view, lookup, add, edit, quit")
+    pilihan = input("Apa yang ingin kamu lakukan? ").lower()
+
+    if pilihan == "view":
+        for nama, data in pokedex.items():
+            print(nama, "->", data)
+
+    elif pilihan == "lookup":
+        nama = input("Masukkan nama Pokémon: ")
+        if nama in pokedex:
+            print(pokedex[nama])
+        else:
+            print("Pokémon tidak ditemukan")
+
+    elif pilihan == "add":
+        nama = input("Nama Pokémon baru: ")
+        tipe = input("Type: ")
+        hp = int(input("HP: "))
+        attack = int(input("Attack: "))
+        pokedex[nama] = {"type": tipe, "hp": hp, "attack": attack}
+        print("Berhasil ditambahkan")
+
+    elif pilihan == "edit":
+        nama = input("Nama Pokémon yang ingin diedit: ")
+        if nama in pokedex:
+            tipe = input("Type baru: ")
+            hp = int(input("HP baru: "))
+            attack = int(input("Attack baru: "))
+            pokedex[nama] = {"type": tipe, "hp": hp, "attack": attack}
+            print("Data berhasil diupdate")
+        else:
+            print("Pokémon tidak ditemukan")
+
+    elif pilihan == "quit":
+        print("Program selesai")
+        break
+
+    else:
+        print("Pilihan tidak valid")
