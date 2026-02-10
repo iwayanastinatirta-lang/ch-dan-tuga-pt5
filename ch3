@@ -1,0 +1,10 @@
+pedang = {
+    'name':'sword minecraft',
+    'damage':14,
+    'rarity':'reguler'
+}
+
+print(pedang)
+pedang['damage'] += 25
+pedang['rarity'] = 'over power'
+print(pedang)
